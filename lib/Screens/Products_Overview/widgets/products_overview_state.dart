@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../Screens/cart_screen.dart';
-import '../providers/cart_provider.dart';
-import '../providers/products_provider.dart';
-import '../Widgets/products_grid.dart';
-import '../Widgets/badge.dart';
-import '../Widgets/app_drawer.dart';
+import '../products_overview_screen.dart';
+import '../../Cart/cart_screen.dart';
+import '../../../providers/cart_provider.dart';
+import '../../../providers/products_provider.dart';
+import '../../../Widgets/products_grid.dart';
+import '../../../Widgets/badge.dart';
+import '../../../Widgets/app_drawer.dart';
 
 enum FilterOptions { Favorites, All }
 
-class ProductsOverviewScreen extends StatefulWidget {
-  static const routeName = '/overview-screen';
-  @override
-  _ProductsOverviewScreenState createState() => _ProductsOverviewScreenState();
-}
-
-class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
+class ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   var _showOnlyFavorites = false;
   var _isLoading = false;
   var _isInit = true;

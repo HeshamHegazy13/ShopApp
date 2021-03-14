@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
+import '../edit_product_screen.dart';
+import '../../../providers/product_provider.dart';
+import '../../../providers/products_provider.dart';
 
-import '../providers/product_provider.dart';
-import '../providers/products_provider.dart';
-
-class EditProductScreen extends StatefulWidget {
-  static const routeName = '/edit-product-screen';
-  @override
-  _EditProductScreenState createState() => _EditProductScreenState();
-}
-
-class _EditProductScreenState extends State<EditProductScreen> {
+class EditProductScreenState extends State<EditProductScreen> {
   final _pricedFocusNode = FocusNode();
   final _descriptionFocusNode = FocusNode();
   final _imageUrlController = TextEditingController();

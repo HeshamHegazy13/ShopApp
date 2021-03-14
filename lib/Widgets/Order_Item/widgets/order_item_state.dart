@@ -3,17 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../providers/order_provider.dart' as ord;
+import '../order_item.dart';
 
-class OrderItem extends StatefulWidget {
-  final ord.OrderItem order;
-  OrderItem(this.order);
-
-  @override
-  _OrderItemState createState() => _OrderItemState();
-}
-
-class _OrderItemState extends State<OrderItem> {
+class OrderItemState extends State<OrderItem> {
   var _expanded = false;
   @override
   Widget build(BuildContext context) {
